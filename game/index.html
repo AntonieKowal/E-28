@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>High/Low</title>
+
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<div id="game">	
+			<label for="guess">Make a guess between 1 and 50!</label><br>
+			<input type="text" name="guess" id="guess" />
+			<button id="playRound">Guess</button>
+			<div id="guessDetail"></div>
+		</div>
+
+		<div id="winner" style="display: none;">
+			<div id="winnerMessage"></div>
+			<button id="resetButton">Play again?</button>
+		</div>
+
+		<ul id="guessList">
+		
+		</ul>
+	</body>
+</html>
