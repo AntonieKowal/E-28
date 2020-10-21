@@ -1,10 +1,9 @@
  # Project 1
-+ By: *your first and last name*
++ By: Antonie Kowal
 + Production URL: <http://e28p1.yourdomain.com>
 
 ## Outside resources
-*your list of outside resources go here*
-
+Just official Vue documentation
 ## Notes for instructor
-*any notes for me to refer to while grading; if none, omit this section*
+None!
 
