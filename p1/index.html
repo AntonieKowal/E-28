@@ -75,7 +75,7 @@
             <h1>High / Low game</h1>
             
             <div>
-                <label for="guessBox">Make a guess between 1-100!</label><br>
+                <label for="guessBox">Make a guess between 1-100!</label><span style="float: right;">{{guessCount}}</span><br>
                 <input type="text" v-model="guess" @keyup.enter="playerGuess(guess)" id="guessBox" :disabled="gameState == 1"></input>
                 <button @click="playerGuess(guess)" :disabled="gameState == 1" id="guessBtn">guess</button><br><br>
                 <button v-if="gameState == 1" @click="resetGame()">play another round</button>
