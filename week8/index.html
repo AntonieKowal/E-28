@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8</title>
+    <!-- <script src='https://unpkg.com/vue@next'></script> -->
+    <script src="js/master.js" defer></script>
+
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #guessBtn {
+            width: 76px;
+        }
+
+        .gameField {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 50%;
+            margin-top: 25px;
+        }
+
+        /* .rowDetail {
+            margin-bottom: 10px;
+            padding: 5px;
+        } */
+
+        .bestScore {
+            background-color: green;
+            color: white;
+        }
+
+        .worstScore {
+            background-color: red;
+            color: white;
+        }
+
+        .legend-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .legend {
+            width: 25px;
+            height: 25px;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <div class="container">
+            <h1>High / Low game</h1>
+            
+            <div>
+                <label for="guessBox">Make a guess between 1-100!</label><span style="float: right;">{{guessCount}}</span><br>
+                <input type="text" v-model="guess" @keyup.enter="playerGuess(guess)" id="guessBox" :disabled="gameState == 1"></input>
+                <button @click="playerGuess(guess)" :disabled="gameState == 1" id="guessBtn">guess</button><br><br>
+                <button v-if="gameState == 1" @click="resetGame()">play another round</button>
+                <button v-if="gameState == 1" @click="resetHistory()">reset round history</button>      
+            </div>
+
+            <!-- better to pass the entire object in as one prop, or the individual key/value pairs one at a time? -->
+            <div class="gameField">
+                <div class="guessDetails">
+                    <guess-detail 
+                        v-for="guess in guesses" 
+                        :status="guess.status" 
+                        :guess="guess.guess" 
+                        :guess-count="guessCount" 
+                        id="guessDetails"
+                    ></guess-detail>
+                </div>
+                
+                <div class="roundDetails">
+                    <round-detail 
+                        v-for="(round, index) in rounds" 
+                        :round="round" 
+                        :index="index" 
+                        id="roundDetails"
+                    ></round-detail>
+                    <div v-if="rounds.length" class="legend-wrapper">
+                        <div class="legend green"></div><span> Best Round</span>
+                        <div class="legend red"></div><span> Worst Round</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
