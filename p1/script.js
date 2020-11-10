@@ -60,7 +60,7 @@ const app = new Vue({
 					this.bestGuess = this.guessCount;
 				}
 
-				if (this.guessCount > this.worstGuess ||this.worstGuess == null) {
+				if (this.guessCount > this.worstGuess || this.worstGuess == null) {
 					this.worstGuess = this.guessCount;
 				}
 			}
