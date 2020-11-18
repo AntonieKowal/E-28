@@ -1,0 +1,34 @@
+{
+    "seeds": [
+        {
+            "title": "My First Test Blog Post",
+            "author": "Antonie Kowal",
+            "post": "here is the content of my first test blog post!",
+            "categories": []
+        },
+        {
+            "title": "My Favorite Band",
+            "author": "Jim Jones",
+            "post": "The Foo Fighters are a great band. I'm excited for their upcoming new record!",
+            "categories": "music"
+        },
+        {
+            "title": "Third blog post",
+            "author": "Joe Fallon",
+            "post": "Here is the content of my third blog post!",
+            "categories": []
+        },
+        {
+            "title": "Monday Night Football",
+            "author": "Doug Macdonald",
+            "post": "I'm glad the Vikings won!",
+            "categories": "sports"
+        },
+        {
+            "title": "Vue is Awesome!",
+            "author": "Antonie Kowal",
+            "post": "here is the content of my blog post!",
+            "categories": "coding"
+        }
+    ]
+}
