@@ -1,14 +1,14 @@
 {
     "seeds": [
         {
-            "name": "Jill Harvard",
-            "email": "jill@harvard.edu",
-            "password": "asdfasdf"
+            "name": "Antonie Kowal",
+            "email": "antonie@harvard.edu",
+            "password": "12345678"
         },
         {
-            "name": "Jamal Harvard",
-            "email": "jamal@harvard.edu",
-            "password": "asdfasdf"
+            "name": "Test User",
+            "email": "test@harvard.edu",
+            "password": "12345678"
         }
     ]
 }

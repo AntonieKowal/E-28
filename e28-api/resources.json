@@ -58,7 +58,7 @@
         }
     },
     "favorite": {
-        "product_id": {
+        "post_id": {
             "type": "integer",
             "validators": [
                 "required",
