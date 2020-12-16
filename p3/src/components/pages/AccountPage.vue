@@ -13,22 +13,22 @@
                 </li>
             </div>
 
-            <button @click="logout">Logout</button>
+            <button @click="logout" data-test="logout">Logout</button>
         </div>
 
         <div v-else>
             <div id="loginForm" v-if="!toggleForm">
                 <h2>Login</h2>
                 <div>
-                    <label>Email: <input type="text" v-model="data.email" /></label>
+                    <label>Email: <input type="text" v-model="data.email" data-test="email"/></label>
                 </div>
                 <div>
                     <label
-                        >Password: <input type="password" v-model="data.password"
+                        >Password: <input type="password" v-model="data.password" data-test="password"
                     /></label>
                 </div>
 
-                <button @click="login">Login</button> 
+                <button @click="login" data-test="login-button">Login</button> 
                 <br><br>
                 <button @click="toggleForms">Register Instead By Clicking Here</button>
 
@@ -56,7 +56,7 @@
 
                 <button @click="register">Register</button> 
                 <br><br>
-                <button @click="toggleForms">Login Instead By Clicking Here</button>
+                <button @click="toggleForms" data-test="toggle-form">Login Instead By Clicking Here</button>
 
 
                 <ul v-if="errors">

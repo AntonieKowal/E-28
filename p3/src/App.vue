@@ -7,8 +7,10 @@
 						v-bind:to="paths[link]"
 						exact
 						class="button"
+						:data-test="link"
 						>{{ link }}
-						<span v-if="link == 'posts' && postCount">({{postCount}})</span>	
+						<span v-if="link == 'posts' && postCount">({{postCount}})</span>
+							
 					</router-link
 					>
 				</li>

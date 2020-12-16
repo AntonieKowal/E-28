@@ -5,13 +5,13 @@
             <h2>Add a New Post!</h2>
 
             <label for="author">Author*</label>
-            <input type="text" v-model="post.author" id="author" />
+            <input type="text" v-model="post.author" id="author" data-test="author"/>
 
             <label for="title">Title*</label>
-            <input type="text" v-model="post.title" id="title" />
+            <input type="text" v-model="post.title" id="title" data-test="title"/>
 
             <label for="post">Post*</label>
-            <textarea v-model="post.post" id="post"></textarea>
+            <textarea v-model="post.post" id="post" data-test="post-content"></textarea>
 
             <strong>Category</strong>
             <div>
@@ -47,7 +47,7 @@
             </div>
             
 
-        <button @click="addPost">Submit Post</button>
+        <button @click="addPost" data-test="submit-post">Submit Post</button>
 
         
         </div>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3 class="post">{{ post.title }}</h3>
+        <h3 class="post" data-test="post-title">{{ post.title }}</h3>
         <p class="post">{{ post.post }}</p>
 
         <ul v-if="post.categories && extraInfo">
@@ -12,7 +12,7 @@
 
         <div v-if="extraInfo">
             Posted on {{timestamp}}
-            by <strong>{{post.author}}</strong>
+            by <strong data-test="author">{{post.author}}</strong>
         </div>
 
         
